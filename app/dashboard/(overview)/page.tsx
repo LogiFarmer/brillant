@@ -9,12 +9,7 @@ import { PostNewDeal } from '@/app/ui/eggs/buttons';
 
 export default async function Page() {
 
-  //const latestInvoices = await fetchLatestInvoices();
   const {
-    numberOfInvoices,
-    numberOfCustomers,
-    totalPaidInvoices,
-    totalPendingInvoices,
   } = await fetchCardData();
   return (
     <div>
