@@ -83,7 +83,7 @@ export function Card({
     <div className="rounded-xl bg-gray-50 px-2 shadow-sm py-6">
       <div className="relative overflow-visible bg-white-50 shadow-md rounded-md flex gap-2 ">
         <Image alt="" className="absolute -left-6 -top-6 w-auto h-14 rounded-lg" 
-            src="/stores/Costco.png"
+            src="/stores/costco.png"
             width={0}
             height={0}
             sizes="100vw"
