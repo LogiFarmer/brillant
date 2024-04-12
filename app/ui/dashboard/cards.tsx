@@ -1,9 +1,23 @@
 import { fetchCardData } from '@/app/lib/data';
 import Image from 'next/image';
 import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
-import { Fragment, Suspense } from 'react';
+import { Suspense } from 'react';
 import { CardsSkeleton } from '../skeletons';
-import { ClassDictionary } from 'clsx';
+
+export interface IHash {
+  [store: string] : string;
+} 
+
+const store_image: IHash  = {
+  "Walmart": "/stores/walmart-logo-474.png",
+  "Costco": "/stores/Costco.png",
+  "IGA": "/stores/iga.png",
+  "Pharmaprix": "/stores/pharmaprix.png",
+  "Metro": "/stores/metro.png",
+  "Super C": "/stores/super c.png",
+  "Provigo": "/Stores/provigo.png",
+  "Maxi": "/stores/maxi.png",
+}
 
 export default async function CardWrapper() {
   const deals = await fetchCardData();
@@ -46,15 +60,7 @@ export default async function CardWrapper() {
 );
 }
 
-const store_image: ClassDictionary = {
-  "Walmart": "/stores/walmart-logo-474.png",
-  "Costco": "/stores/Costco.png",
-  "IGA": "/stores/iga.png",
-  "Pharmaprix": "",
-  "Metro": "/stores/metro.png",
-  "Super C": "/stores/super c.png",
-  "Provigo": "/Stores/provigo.png"
-}
+
 
 export function Card({
   title,
