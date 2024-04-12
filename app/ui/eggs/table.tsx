@@ -5,6 +5,19 @@ import PriceStatus from '@/app/ui/eggs/status';
 import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
 import * as React from "react"
 import { EggPricesTable } from '@/app/lib/definitions'
+import { ClassDictionary } from 'clsx';
+
+const store_image: ClassDictionary = {
+  "Walmart": "/stores/walmart-logo-474.png",
+  "Costco": "/stores/Costco.png",
+  "IGA": "/stores/iga.png",
+  "Pharmaprix": "/stores/pharmaprix.png",
+  "Metro": "/stores/metro.png",
+  "Super C": "/stores/super c.png",
+  "Provigo": "/Stores/provigo.png",
+  "Maxi": "/Stores/maxi.png",
+}
+
 
 export default function PriceTable({
     eggprices,
@@ -27,13 +40,13 @@ export default function PriceTable({
                 <div className="flex items-center justify-between border-b pb-0">
                   <div>
                     <div className="relative mb-2 flex overflow-visible items-center gap-4">
-                      <Image 
-                        alt="" 
-                        className="absolute -left-8 -top-8 rounded-full w-20 h-20" 
-                        src="/stores/walmart-logo-474.png"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
+                    <Image 
+                      alt="" 
+                      className="absolute -left-6 -top-6 w-auto h-10 rounded-lg" 
+                      src={store_image[eggprice.store]}
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                       />
                       <Image
                         src={eggprice.image_url}
