@@ -7,15 +7,15 @@ import * as React from "react"
 import { EggPricesTable } from '@/app/lib/definitions'
 import { IHash } from '../dashboard/cards';
 
-const store_image: IHash = {
+const store_image: IHash  = {
   "Walmart": "/stores/walmart-logo-474.png",
-  "Costco": "/stores/Costco.png",
-  "IGA": "/stores/iga.png",
+  "Costco": "/stores/walmart-logo-474.png",
+  "IGA": "/stores/walmart-logo-474.png",
   "Pharmaprix": "/stores/pharmaprix.png",
-  "Metro": "/stores/metro.png",
-  "Super C": "/stores/super c.png",
-  "Provigo": "/Stores/provigo.png",
-  "Maxi": "/stores/maxi.png",
+  "Metro": "/stores/walmart-logo-474.png",
+  "Super C": "/stores/walmart-logo-474.png",
+  "Provigo": "/Stores/walmart-logo-474.png",
+  "Maxi": "/stores/walmart-logo-474.png",
 }
 
 export default function PriceTable({
